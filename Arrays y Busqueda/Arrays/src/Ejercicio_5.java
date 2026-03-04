@@ -1,0 +1,31 @@
+// El profesor necesita saber cuantos sacaron 5.0 exactamente
+
+public class Ejercicio_5 {
+ 
+
+    public static void main(String[] args) {
+
+        
+        double[] notas = {
+            3.5, 4.0, 2.8, 5.0, 3.9,
+            4.5, 5.0, 3.2, 2.5, 4.8,
+            5.0, 3.7, 4.1, 3.0, 4.9,
+            2.8, 5.0, 3.6, 4.2, 3.3,
+            4.7, 3.8, 2.9, 5.0, 4.4,
+            3.1, 4.6, 3.4, 4.0, 5.0
+        };
+
+        int contador = 0;
+
+       
+        for (int i = 0; i < notas.length; i++) {
+            if (notas[i] == 5.0) {
+                contador++;
+            }
+        }
+
+        
+        System.out.println("Cantidad de estudiantes con nota 5.0: " + contador);
+    }
+
+}
