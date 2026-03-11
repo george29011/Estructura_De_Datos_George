@@ -1,4 +1,5 @@
-/*Algoritmo obligatorio: Ordenamiento por Inserción (Insertion Sort)
+/*2. Organización de Biblioteca Dinámica
+Algoritmo obligatorio: Ordenamiento por Inserción (Insertion Sort)
 
 Contexto: Un bibliotecario recibe una caja de libros y los va colocando uno a uno en el estante en su posición correcta.
 Detalle del ejercicio: El usuario debe ingresar la cantidad de libros y luego el código ISBN (número entero) de cada uno.
