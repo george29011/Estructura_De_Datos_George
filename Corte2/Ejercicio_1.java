@@ -17,7 +17,7 @@ public class Ejercicio_1 {
     }
 }
 
-// 🔥 Clase Tren fuera del main
+
 class Tren {
     private Vagon cabeza;
 
@@ -64,7 +64,7 @@ class Tren {
     }
 }
 
-// 🔥 Clase Vagon también fuera
+
 class Vagon {
     String contenido;
     double pesoToneladas;
