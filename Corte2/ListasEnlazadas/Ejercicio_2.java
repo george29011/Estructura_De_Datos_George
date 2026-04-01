@@ -1,24 +1,65 @@
 package Corte2.ListasEnlazadas;
 
+
+import java.util.Scanner;
+
 public class Ejercicio_2 {
 
     public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
         Estante estante = new Estante();
 
-       
-        estante.agregarProducto("Leche", 10, 2);      // va al inicio
-        estante.agregarProducto("Queso", 5, 7);       // va al final
-        estante.agregarProducto("Yogurt", 8, 1);      // va al inicio
-        estante.agregarProducto("Mantequilla", 4, 6); // va al final
-        estante.agregarProducto("Crema", 6, 4);       // va al final
+        int opcion;
 
-        System.out.println("=== TODOS LOS PRODUCTOS ===");
-        estante.mostrarProductos();
+        do {
+            System.out.println("\n=== MENÚ ===");
+            System.out.println("1. Agregar producto");
+            System.out.println("2. Mostrar productos");
+            System.out.println("3. Productos por vencer (<5 días)");
+            System.out.println("4. Salir");
+            System.out.print("Seleccione una opción: ");
+            opcion = sc.nextInt();
+            sc.nextLine(); 
 
-        System.out.println("\n=== PRODUCTOS POR VENCER (<5 días) ===");
-        estante.productosPorVencer();
+            switch (opcion) {
+                case 1:
+                    System.out.print("Nombre del producto: ");
+                    String nombre = sc.nextLine();
+
+                    System.out.print("Cantidad: ");
+                    int cantidad = sc.nextInt();
+
+                    System.out.print("Días para vencer: ");
+                    int dias = sc.nextInt();
+
+                    estante.agregarProducto(nombre, cantidad, dias);
+                    System.out.println("Producto agregado correctamente");
+                    break;
+
+                case 2:
+                    System.out.println("\n=== TODOS LOS PRODUCTOS ===");
+                    estante.mostrarProductos();
+                    break;
+
+                case 3:
+                    System.out.println("\n=== PRODUCTOS POR VENCER (<5 días) ===");
+                    estante.productosPorVencer();
+                    break;
+
+                case 4:
+                    System.out.println("Saliendo del programa...");
+                    break;
+
+                default:
+                    System.out.println("Opción inválida");
+            }
+
+        } while (opcion != 4);
+
+        sc.close();
     }
+
 }
 
 
