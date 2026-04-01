@@ -1,4 +1,4 @@
-package Corte2;
+package Corte2.ListasEnlazadas;
 
 public class Ejercicio_3 {
 
