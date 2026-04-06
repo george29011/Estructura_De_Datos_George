@@ -1,27 +1,11 @@
-package Corte2.ListasEnlazadas;
+package Corte2.ListasEnlazadas.Ejercicio1;
 
-public class Ejercicio_1 {
+import Corte2.ListasEnlazadas.Ejercicio1.Vagon;
 
-    public static void main(String[] args) {
-
-        Tren tren = new Tren();
-
-        tren.agregarVagon("Carbón", 20.5, "Colombia", "México");
-        tren.agregarVagon("Acero", 15.0, "Brasil", "Argentina");
-        tren.agregarVagon("Granos", 10.2, "Perú", "Chile");
-
-        tren.mostrarTren();
-
-        double total = tren.calcularPesoTotal();
-        System.out.println("Peso total del tren: " + total + " toneladas");
-    }
-}
-
-
-class Tren {
+public class Clase_tren {
     private Vagon cabeza;
 
-    public Tren() {
+    public Clase_tren() {
         cabeza = null;
     }
 
@@ -52,6 +36,11 @@ class Tren {
     }
 
     public void mostrarTren() {
+        if (cabeza == null) {
+            System.out.println("El tren está vacío.");
+            return;
+        }
+
         Vagon actual = cabeza;
 
         while (actual != null) {
@@ -61,23 +50,5 @@ class Tren {
                     " | Destino: " + actual.destino);
             actual = actual.siguiente;
         }
-    }
-}
-
-
-class Vagon {
-    String contenido;
-    double pesoToneladas;
-    String origen;
-    String destino;
-
-    Vagon siguiente;
-
-    public Vagon(String contenido, double pesoToneladas, String origen, String destino) {
-        this.contenido = contenido;
-        this.pesoToneladas = pesoToneladas;
-        this.origen = origen;
-        this.destino = destino;
-        this.siguiente = null;
     }
 }
