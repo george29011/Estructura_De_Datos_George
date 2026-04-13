@@ -16,7 +16,7 @@ public class Cancion {
         this.siguiente = null;
     }
 
-    // Getters
+    
     public String getTitulo() {
         return titulo;
     }
@@ -37,7 +37,7 @@ public class Cancion {
         return siguiente;
     }
 
-    // Setter
+   
     public void setSiguiente(Cancion siguiente) {
         this.siguiente = siguiente;
     }
