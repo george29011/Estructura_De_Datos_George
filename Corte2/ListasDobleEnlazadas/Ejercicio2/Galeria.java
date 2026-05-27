@@ -6,7 +6,7 @@ class Galeria {
 
     
     public void agregar(String nombre, double tamano, String resolucion) {
-        Fotografia nueva = new Fotografia(nombre, tamaño, resolucion);
+        Fotografia nueva = new Fotografia(nombre, tamano, resolucion);
 
         if (cabeza == null) {
             cabeza = nueva;
@@ -28,7 +28,7 @@ class Galeria {
         } else {
             System.out.println("Foto actual:");
             System.out.println("Archivo: " + actual.nombreArchivo +
-                               " | Tamaño: " + actual.tamañoMB + " MB" +
+                               " | Tamaño: " + actual.tamanoMB + " MB" +
                                " | Resolución: " + actual.resolucion);
         }
     }
@@ -75,7 +75,7 @@ class Galeria {
         System.out.println("\n--- RECORRIDO HACIA ADELANTE ---");
         while (temp != null) {
             System.out.println("Archivo: " + temp.nombreArchivo +
-                               " | Tamaño: " + temp.tamañoMB + " MB" +
+                               " | Tamaño: " + temp.tamanoMB + " MB" +
                                " | Resolución: " + temp.resolucion);
             temp = temp.siguiente;
         }
@@ -89,7 +89,7 @@ class Galeria {
         System.out.println("\n--- RECORRIDO HACIA ATRÁS ---");
         while (ultimo != null) {
             System.out.println("Archivo: " + ultimo.nombreArchivo +
-                               " | Tamaño: " + ultimo.tamañoMB + " MB" +
+                               " | Tamaño: " + ultimo.tamanoMB + " MB" +
                                " | Resolución: " + ultimo.resolucion);
             ultimo = ultimo.anterior;
         }

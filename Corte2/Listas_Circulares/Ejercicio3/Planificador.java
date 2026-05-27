@@ -31,7 +31,7 @@ class Planificador {
 
         while (cabeza != null) {
 
-            // Buscar el anterior (solo si es necesario)
+            
             if (anterior == null) {
                 anterior = actual;
                 while (anterior.siguiente != actual) {
@@ -50,13 +50,13 @@ class Planificador {
 
                 ordenFinalizacion.add(actual.nombre);
 
-                // Caso: único nodo
+               
                 if (actual == actual.siguiente) {
                     cabeza = null;
                     break;
                 }
 
-                // Eliminar nodo
+                
                 anterior.siguiente = actual.siguiente;
 
                 if (actual == cabeza) {
@@ -74,7 +74,7 @@ class Planificador {
             System.out.println("------------------------");
         }
 
-        // Resultado final
+        
         System.out.println("\nOrden de finalización:");
         for (String nombre : ordenFinalizacion) {
             System.out.println(nombre);

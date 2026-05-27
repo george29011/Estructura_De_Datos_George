@@ -1,7 +1,5 @@
 package Corte2.ListasEnlazadas.Ejercicio1;
 
-import Corte2.ListasEnlazadas.Ejercicio1.Vagon;
-
 public class Clase_tren {
     private Vagon cabeza;
 
