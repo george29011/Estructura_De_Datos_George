@@ -33,7 +33,7 @@ public class Main {
                     sc.nextLine();
 
                     impresora.agregarDocumento(new Documento(archivo, usuario, paginas, color));
-                    System.out.println("✅ Documento agregado a la cola.");
+                    System.out.println(" Documento agregado a la cola.");
                     break;
 
                 case 2:

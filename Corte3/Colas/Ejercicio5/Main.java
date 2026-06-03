@@ -34,7 +34,7 @@ public class Main {
                     sc.nextLine();
 
                     bodega.registrarPedido(new Pedido(numero, cliente, total, cancelado));
-                    System.out.println("✅ Pedido registrado.");
+                    System.out.println(" Pedido registrado.");
                     break;
 
                 case 2:

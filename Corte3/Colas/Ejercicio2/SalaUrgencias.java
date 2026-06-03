@@ -30,7 +30,7 @@ public class SalaUrgencias {
         int contador = 0;
         System.out.println("\n--- ATENDIENDO PACIENTES ---");
         while (!colaPacientes.isEmpty()) {
-            Paciente p = colaPacientes.poll(); // extrae el primero
+            Paciente p = colaPacientes.poll(); 
             System.out.println("Atendiendo: " + p);
             contador++;
         }

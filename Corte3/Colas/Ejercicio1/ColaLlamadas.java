@@ -1,33 +1,61 @@
 package Corte3.Colas.Ejercicio1;
-import Corte3.Colas.Ejercicio1.Llamada;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class CentroLlamadas {
-    private Queue<Llamada> colaLlamadas = new LinkedList<>();
+public class ColaLlamadas {
 
-    public void agregarLlamada(Llamada llamada) {
-        colaLlamadas.add(llamada);
+    private Queue<Llamada> cola;
+
+    public ColaLlamadas() {
+        cola = new LinkedList<>();
     }
 
-    public void mostrarCola() {
-        if (colaLlamadas.isEmpty()) {
+
+    public void agregarLlamada(Llamada llamada) {
+        cola.offer(llamada);
+        System.out.println("Llamada agregada correctamente.");
+    }
+
+   
+    public void atenderLlamada() {
+
+        if (cola.isEmpty()) {
             System.out.println("No hay llamadas en espera.");
         } else {
-            System.out.println("Llamadas en espera:");
-            for (Llamada l : colaLlamadas) {
-                System.out.println(" - " + l);
+            Llamada atendida = cola.poll();
+
+            System.out.println("Atendiendo llamada:");
+            System.out.println(atendida);
+        }
+    }
+
+   
+    public void mostrarLlamadas() {
+
+        if (cola.isEmpty()) {
+            System.out.println("No hay llamadas en espera.");
+        } else {
+
+            System.out.println("\n=== LLAMADAS EN ESPERA ===");
+
+            for (Llamada llamada : cola) {
+                System.out.println(llamada);
             }
         }
     }
 
+ 
     public int contarPorMotivo(String motivo) {
+
         int contador = 0;
-        for (Llamada l : colaLlamadas) {
-            if (l.getMotivoConsulta().equalsIgnoreCase(motivo)) {
+
+        for (Llamada llamada : cola) {
+
+            if (llamada.motivoConsulta.equalsIgnoreCase(motivo)) {
                 contador++;
             }
         }
+
         return contador;
     }
 }
